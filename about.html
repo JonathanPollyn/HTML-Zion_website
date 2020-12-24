@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Zion Compassion Care | About us</title>
+</head>
+
+<body id="home">
+    <!-- Header starts here -->
+    <header class="header-style about">
+        <div id="nav-bar" class="nav-bar top">
+            <h1 class="zion-logo">
+                <span class="primary-text"><i class="fas fa-book-open"></i> Zion</span>Compassion Care
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">services</a></li>
+                    <li><a href="training.html">training</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content-info">
+            <h1>About us</h1>
+
+        </div>
+    </header>
+    <!-- header ends here -->
+    <!-- =============================================================================== -->
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="page-container">
+                    <article class="card">
+                        <h1 class="l-heading">A Brief about Zion</h1>
+                        <p>Zion Started offering Home and Community Based Services (HCBS) and in 2014 extended its
+                            services to Group Homes. This year, 2019, Zion has opened her first Day Treatment Program
+                            Center for many types of day programs (DTA, DTT, DTS). We are excited to announce our
+                            Nursing Supported Group Homes as well. Zion offers a unique quality of health, social, and
+                            human services to qualify consumers in Arizona. We believe that with our competent,
+                            compassionate, well-educated staff and organized responsive leadership, we are the Home
+                            healthcare and community-based social and human services agency of choice in Arizona State.
+                        </p>
+                        <p>Zion is founded on a Christian believes. However, we do not impose our Christian believes on
+                            anyone. Consumers of our services are individuals and families in need of community, home
+                            care, and group home services. Arizona Department of Economic Security/Division of
+                            Developmental Disability usually refer our consumers. Our Agency is contracted with Arizona
+                            Department of Economic Security/Division of Developmental Disability and licensed by Arizona
+                            Department of Health Services</p>
+                    </article>
+                    <aside class="card bg-light-3">
+                        <p>Zion is registered with Arizona health care cost containment system (AHCCCS) and services
+                            reimbursed by Medicaid and other private insurance carriers. It is our policy to make sure
+                            we meet the requirements, regulations, guidelines and in compliance with department and
+                            division for providing home and community based, developmental home and group home services
+                            to consumers in Arizona State.</p>
+                    </aside>
+
+
+
+
+                </div>
+            </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <img src="images/zionlogo.png" alt="NewsGrid">
+                <p>Zion Compassion Care is a Limited Liability Company based in Arizona, Owned by its principal
+                    investor. The initial office was established in Queen Creek, Arizona and now our main office is in
+                    Mesa, Arizona. Zion Compassion Care (Zion) was founded in 2009 and started operating on September
+                    15, 2011..</p>
+            </div>
+            <div>
+                <h3>Email Newsletter</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <form>
+                    <input type="email" placeholder="Enter Email...">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Site Links</h3>
+                <ul class="list">
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Join Our Team</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nesciunt!</p>
+                <a href="career.html" class="btn btn-secondary">Join Now</a>
+            </div>
+            <div>
+                <p>
+                    Copyright &copy; 2020, Zion Compassion LLC
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ================================================================================================== -->
+    <!-- Jquery CDN starts Here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="js/lightbox.min.js"></script>
+    <!-- ================================================================================================= -->
+    <!-- Implementation of java script starts here -->
+    <script>
+        const navbar = document.getElementById('nav-bar');
+        let scrolled = false;
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function () {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled = true;
+                }, 200);
+            } else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        };
+
+        // Smooth Scrolling starts here
+        $('#nav-bar a, .btn').on('click', function (e) {
+            if (this.hash !== '') {
+                e.preventDefault();
+
+                const hash = this.hash;
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top - 100,
+                    },
+                    800
+                );
+            }
+        });
+      // Smooth Scrolling ends here
+    </script>
+
+</body>
+
+</html>
